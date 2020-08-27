@@ -5,7 +5,7 @@ class GalleryPage extends StatelessWidget {
   String imagePath;
   GalleryPage({this.imagePath});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {//master editing
 
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.black),
