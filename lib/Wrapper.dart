@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:chatz/authenticate/authenticate.dart';
+import 'package:chatz/authenticate/sign_in.dart';
 import 'package:chatz/home/home.dart';
 import 'package:chatz/models/user.dart';
 import 'package:chatz/screens/logo.dart';
@@ -16,6 +17,6 @@ class Wrapper extends StatelessWidget {
 
 
     //either home or authenticate
-    return Logo();
+    return user!=null?Home():SignIn();//hello guys
   }
 }

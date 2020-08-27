@@ -48,29 +48,29 @@ class _chatPageState extends State<chatPage> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             documentSnapshot.data['image_url'] != ''?
-             InkWell(
-               onLongPress: (){
-                 showDialog(context: context,builder: (BuildContext context){
-                   return AlertDialog(
-                     title: Text('delete photo?'),
-                     actions: <Widget>[
-                       FlatButton(
-                         child: Text('no'),
-                         onPressed: () => Navigator.pop(context),
-                       ),
-                       FlatButton(
-                         child: Text('yes'),
-                         onPressed: ()async{
-                           QuerySnapshot documents =  await chatReference.where('time',isEqualTo: documentSnapshot.data['time']).getDocuments();
-                           String docId = documents.documents.first.documentID;
-                           chatReference.document(docId).delete();
-                           Navigator.pop(context);
-                         },
-                       )
-                     ],
-                   );
-                 });
-               },
+               InkWell(
+                 onLongPress: (){
+                   showDialog(context: context,builder: (BuildContext context){
+                     return AlertDialog(
+                       title: Text('delete photo?'),
+                       actions: <Widget>[
+                         FlatButton(
+                           child: Text('no'),
+                           onPressed: () => Navigator.pop(context),
+                         ),
+                         FlatButton(
+                           child: Text('yes'),
+                           onPressed: ()async{
+                             QuerySnapshot documents =  await chatReference.where('time',isEqualTo: documentSnapshot.data['time']).getDocuments();
+                             String docId = documents.documents.first.documentID;
+                             chatReference.document(docId).delete();
+                             Navigator.pop(context);
+                           },
+                         )
+                       ],
+                     );
+                   });
+                 },
                onTap: (){
                  Navigator.of(context).push(
                      MaterialPageRoute(

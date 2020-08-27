@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
+
     return StreamProvider<List<Contacts>>.value(
       value:DatabaseService(uid:user.uid,name: user.name,email: user.email).contacts,
       child:Scaffold(

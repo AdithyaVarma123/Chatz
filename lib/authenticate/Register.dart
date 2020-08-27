@@ -1,5 +1,5 @@
 import 'package:chatz/services/auth.dart';
-import 'package:chatz/shared/loading.dart';
+import 'file:///C:/Users/Adithya%20Varma/AndroidStudioProjects/login_screen/lib/screens/loading.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
