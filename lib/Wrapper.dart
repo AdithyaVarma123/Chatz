@@ -15,7 +15,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
 
-
+    var chari;
     //either home or authenticate
     return user!=null?Home():SignIn();//hello guys
   }
